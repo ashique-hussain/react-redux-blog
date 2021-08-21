@@ -10,10 +10,6 @@ const Search = () => {
     const handleRedirect = () => {
         history.push(`/search?s=${search}`)
     }
-    setTimeout(() => {
-        handleRedirect();
-    }, 2000);
-
     return (
         <form action='/search' method="get" className="d-flex">
             <div className="input-group">
