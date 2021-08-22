@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `npm ci`
 
-After taking the repository in your local download all dependencies using above commands
+After taking the repository in your local, download all dependencies using above command
 
 ### `npm start`
 
