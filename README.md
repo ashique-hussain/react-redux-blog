@@ -1,12 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `git clone`
+
+Clone this repository into your local machine using below command.
+
+`git clone https://github.com/ashique-hussain/react-redux-blog`
+
 ### `npm ci`
 
-After taking the repository in your local, download all dependencies using above command
+After taking clone of this repository in your local, run above command to download node dependencies.
 
 ### `npm start`
 
