@@ -11,15 +11,18 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from 'component/common/Footer';
 import Header from 'component/common/Header';
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
-        <Header />
-        <App />
-        <Footer />
-      </Router>
+      <HelmetProvider>
+        <Router>
+          <Header />
+          <App />
+          <Footer />
+        </Router>
+      </HelmetProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

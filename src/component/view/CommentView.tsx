@@ -1,13 +1,13 @@
 interface IProps {
     name: string;
     comment: string;
-    key: number;
+    id?: number;
 }
 
 const CommentView = (props: IProps) => {
-    const { name, comment, key } = props;
+    const { name, comment, id } = props;
     return (
-        <div className="card mt-1" key={key}>
+        <div className="card mt-1" key={id}>
             <div className="card-body">
                 <div className="d-flex">
                     <i className="bi bi-person-circle fs-2"></i>

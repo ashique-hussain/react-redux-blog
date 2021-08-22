@@ -2,7 +2,7 @@ import CardList from 'component/view/CardList';
 import PreLoading from 'component/view/PreLoading';
 import { fetchPostsAsync, selectBlogPosts } from 'features/blog/blogSlice';
 import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 import { useAppSelector, useAppDispatch } from 'redux/hooks';
 

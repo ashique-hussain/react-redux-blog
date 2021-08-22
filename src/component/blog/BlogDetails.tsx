@@ -3,7 +3,7 @@ import CommentView from "component/view/CommentView";
 import { fetchPostByIdAsync, selectPostById, selectStatus } from "features/blog/blogSlice";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import PreLoading from "component/view/PreLoading";
 import { fetchCommentsByPostIdAsync, selectComments, selectPostId, selectStatus as commentStatus } from "features/comment/commentSlice";
@@ -34,7 +34,7 @@ const BlogDetails = () => {
                 <BlogView title={response?.title} detail={response?.body} />
                 <button className="btn btn-primary my-2" onClick={() => dispatch(fetchCommentsByPostIdAsync(slug))}>Load Comments</button>
                 {postId === slug && commentResp && commentResp.length > 0 && commentResp.map(comment =>
-                    <CommentView name={comment.name} comment={comment.body} key={comment.id} />
+                    <CommentView name={comment.name} comment={comment.body} id={comment.id} />
                 )}
             </div>
         </>

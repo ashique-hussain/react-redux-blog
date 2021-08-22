@@ -2,7 +2,7 @@ import CardList from "component/view/CardList";
 import PreLoading from "component/view/PreLoading";
 import { fetchPostsAsync, selectBlogPosts } from "features/blog/blogSlice";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 
@@ -14,7 +14,7 @@ const SearchPosts = () => {
     let queryParam = useQuery();
     const response = useAppSelector(selectBlogPosts);
     const dispatch = useAppDispatch();
-    const query = queryParam.get('s')?.trim();
+    const query = queryParam.get('s')?.trim().toLocaleLowerCase();
 
     useEffect(() => {
         dispatch(fetchPostsAsync());

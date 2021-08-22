@@ -11,7 +11,7 @@ const Search = () => {
         history.push(`/search?s=${search}`)
     }
     return (
-        <form action='/search' method="get" className="d-flex">
+        <form onSubmit={handleRedirect} className="d-flex">
             <div className="input-group">
                 <input name='s' type="search" onChange={handleSearch} className="form-control" placeholder="search blog..." aria-label="search blog" aria-describedby="search" />
                 <span className="input-group-text pointer" id="search" onClick={handleRedirect}><i className="bi bi-search"></i></span>
